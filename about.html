@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | About</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            left: -8px;
+            top: 0;
+            background-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Animated Navbar -->
+    <nav class="fixed w-full bg-white shadow-md z-50" data-aos="fade-down">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-blue-500 flex items-center">
+                        <i data-feather="code" class="mr-2"></i>Portfolio
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-500">Home</a>
+                    <a href="about.html" class="nav-link text-blue-500 hover:text-blue-600">About</a>
+                    <a href="projects.html" class="nav-link text-gray-700 hover:text-blue-500">Projects</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-500">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 hover:text-blue-500">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-500 hover:bg-blue-50">About</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Projects</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">About Me</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Get to know the person behind the work</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="http://static.photos/people/640x360/4" alt="Profile" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Who I Am</h2>
+                    <p class="text-gray-600 mb-4">
+                        I'm a passionate developer and designer with over 5 years of experience creating digital experiences that matter. 
+                        My journey in tech started when I built my first website at 15, and I've been hooked ever since.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        I believe in clean, efficient code and thoughtful, user-centered design. Every project is an opportunity to solve 
+                        problems creatively and deliver value to users.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new recipes in the kitchen.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="projects.html" class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 shadow-lg">
+                            View My Work
+                        </a>
+                        <a href="contact.html" class="px-6 py-3 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50 transition duration-300">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My Journey</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Key milestones in my professional career</p>
+            </div>
+            
+            <div class="relative max-w-3xl mx-auto">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 md:left-4 h-full w-0.5 bg-blue-200 transform -translate-x-1/2 md:translate-x-0"></div>
+                
+                <!-- Timeline items -->
+                <div class="space-y-8">
+                    <!-- Item 1 -->
+                    <div class="relative pl-8 md:pl-16" data-aos="fade-up">
+                        <div class="timeline-item bg-white p-6 rounded-lg shadow-sm relative">
+                            <div class="absolute -left-2 md:-left-4 top-0 h-4 w-4 rounded-full bg-blue-500 transform -translate-x-1/2"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                <h3 class="font-bold text-gray-800">Senior Frontend Developer</h3>
+                                <span class="text-blue-500 text-sm">2021 - Present</span>
+                            </div>
+                            <h4 class="text-gray-600 mb-3">TechSolutions Inc.</h4>
+                            <p class="text-gray-500">
+                                Leading a team of developers to build responsive web applications using React and Node.js. 
+                                Implemented new development processes that improved team productivity by 30%.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="relative pl-8 md:pl-16" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-item bg-white p-6 rounded-lg shadow-sm relative">
+                            <div class="absolute -left-2 md:-left-4 top-0 h-4 w-4 rounded-full bg-blue-500 transform -translate-x-1/2"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                <h3 class="font-bold text-gray-800">Frontend Developer</h3>
+                                <span class="text-blue-500 text-sm">2018 - 2021</span>
+                            </div>
+                            <h4 class="text-gray-600 mb-3">Digital Creations</h4>
+                            <p class="text-gray-500">
+                                Developed and maintained client websites using modern JavaScript frameworks. 
+                                Collaborated with designers to implement pixel-perfect UIs that increased user engagement.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="relative pl-8 md:pl-16" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-item bg-white p-6 rounded-lg shadow-sm relative">
+                            <div class="absolute -left-2 md:-left-4 top-0 h-4 w-4 rounded-full bg-blue-500 transform -translate-x-1/2"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                <h3 class="font-bold text-gray-800">Web Design Intern</h3>
+                                <span class="text-blue-500 text-sm">2017 - 2018</span>
+                            </div>
+                            <h4 class="text-gray-600 mb-3">Creative Agency</h4>
+                            <p class="text-gray-500">
+                                Assisted in designing and developing websites for small businesses. 
+                                Gained hands-on experience with HTML, CSS, and JavaScript while working on real client projects.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="relative pl-8 md:pl-16" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-item bg-white p-6 rounded-lg shadow-sm relative">
+                            <div class="absolute -left-2 md:-left-4 top-0 h-4 w-4 rounded-full bg-blue-500 transform -translate-x-1/2"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                <h3 class="font-bold text-gray-800">Computer Science Degree</h3>
+                                <span class="text-blue-500 text-sm">2013 - 2017</span>
+                            </div>
+                            <h4 class="text-gray-600 mb-3">State University</h4>
+                            <p class="text-gray-500">
+                                Graduated with honors while working on side projects and freelance work. 
+                                Specialized in human-computer interaction and web technologies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Technical Skills</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Tools and technologies I work with</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="code" class="text-blue-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-medium text-gray-800">HTML/CSS</h3>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="code" class="text-blue-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-medium text-gray-800">JavaScript</h3>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="code" class="text-blue-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-medium text-gray-800">React</h3>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="250">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="code" class="text-blue-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-medium text-gray-800">Node.js</h3>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="code" class="text-blue-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-medium text-gray-800">MongoDB</h3>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg text-center" data-aos="fade-up" data-aos-delay="350">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="code" class="text-blue-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-medium text-gray-800">Git</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-500 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-6">Want to work together?</h2>
+            <p class="text-blue-100 mb-8 max-w-2xl mx-auto">I'm always interested in hearing about new projects and opportunities. Let's connect!</p>
+            <a href="contact.html" class="inline-block px-8 py-3 bg-white text-blue-500 rounded-lg font-medium hover:bg-gray-100 transition duration-300 shadow-lg">
+                Contact Me
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i data-feather="code" class="mr-2"></i>Portfolio
+                    </h3>
+                    <p class="text-gray-400">Creating digital experiences that inspire and engage.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mobile Apps</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mt-4">hello@example.com</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Replace feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
